@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("log_Status") var status = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+//        chainging to home when user logged in...
+        if status {
+            Home()
+        }else{
+            Login()
+        }
     }
 }
 
